@@ -128,9 +128,37 @@ console.log(text); //The quick brown fox jumps over the lazy dog
 // Example
 
 // x is a string
-let x = "John";
+// let x = "John";
 
-// y is an object
-let y = new String("John");
+// // y is an object
+// let y = new String("John");
 
-console.log(typeof x + " " + typeof y); //string object
+// console.log(typeof x + " " + typeof y); //string object
+
+// Do not create String objects.
+
+// The new keyword complicates the code and slows down execution speed.
+
+// String objects can produce unexpected results:
+
+// When using the == operator, x and y are equal:
+
+// let x = "John";        // x is a string
+// let y = new String("John");  // y is an object
+// console.log((x==y)); //true
+
+// let x = "John";        // x is a string
+// let y = new String("John");  // y is an object
+// console.log((x===y)); //false
+
+// Note the difference between (x==y) and (x===y).
+
+
+// let x = new String("John");  // x is an object
+// let y = new String("John");  // y is an object
+// console.log((x==y)); //false
+
+let x = new String("John");  // x is an object
+let y = new String("John");  // y is an object
+console.log((x===y)); //false
+// Comparing two JavaScript objects always returns false.
