@@ -5,13 +5,13 @@
 // Example
 
 // Create an Object
-// const person = {
-//   name: "John",
-//   age: 30,
-//   city: "New York"
-// };
+const person1 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
 
-// console.log(person);
+ console.log(person1);
 // Some solutions to display JavaScript objects are:
 
 // Displaying the Object Properties by name
@@ -26,31 +26,31 @@
 // Example
 
 // // Create an Object
-// const person = {
-//     name: "John",
-//     age: 30,
-//     city: "New York"
-//   };
-//   console.log(person.name + ", " + person.age + ", " + person.city); //John, 30, New York
+const person2 = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  console.log(person2.name + ", " + person2.age + ", " + person2.city); //John, 30, New York
   
 //   Displaying Properties in a Loop
 //   The properties of an object can be collected in a loop:
 //Example
 
 // Create an Object
-// const person = {
-//   name: "John",
-//   age: 30,
-//   city: "New York"
-// };
+const person3 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
 
-// // Build a Text
-// let text = "";
-// for (let x in person) {
-//   text += person[x] + " ";
-// };
+// Build a Text
+let text1 = "";
+for (let x in person3) {
+  text1 += person3[x] + " ";
+};
 
-// console.log(text); //John 30 New York
+console.log(text1); //John 30 New York
 // note:You must use person[x] in the loop.person.x will not work (Because x is the loop variable).
 
 ///////////////////////////////////////////////////////////////////////
@@ -59,16 +59,16 @@
 // Object.values() creates an array from the property values:
 
 // Create an Object
-// const person = {
-//   name: "John",
-//   age: 30,
-//   city: "New York"
-// };
+const person4 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
 
-// // Create an Array
-// const myArray = Object.values(person);
+// Create an Array
+const myArray = Object.values(person4);
 
-// console.log(myArray); //[ 'John', 30, 'New York' ]
+console.log(myArray); //[ 'John', 30, 'New York' ]
 
 ///////////////////////////////////////////////////////////////////
 // Using Object.entries()

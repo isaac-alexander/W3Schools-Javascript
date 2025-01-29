@@ -42,27 +42,27 @@ console.log("The value of z is: " + z);
 
 // Example using let
 
-let x = 5;
-let y = 6;
-let z = x + y;
+let x1 = 5;
+let y1 = 6;
+let z1 = x1 + y1;
 
-console.log("The value of z is: " + z);
+console.log("The value of z1 is: " + z1);
 
 // Example using const
 
-const x = 5;
-const y = 6;
-const z = x + y;
+const x2 = 5;
+const y2 = 6;
+const z2 = x2 + y2;
 
-console.log("The value of z is: " + z);
+console.log("The value of z2 is: " + z2);
 
 // Mixed Example
 
-// const price1 = 5;
-// const price2 = 6;
-// let total = price1 + price2;
+ const price1 = 5;
+ const price2 = 6;
+ let total = price1 + price2;
 
-// console.log("The total is: " + total);
+ console.log("The total is: " + total);
 
 // The two variables price1 and price2 are declared with the const keyword.
 
@@ -157,21 +157,21 @@ console.log(pi + " " + person + " " + answer);
 
 // You declare a JavaScript variable with the var or the let keyword:
 
- var carName;
+ //var carName;
 // or:
- let carName;
+ //let carName;
 
 //  After the declaration, the variable has no value (technically it is undefined).
 
 // To assign a value to the variable, use the equal sign:
 
-carName = "Volvo";
+///carName = "Volvo";
 
 // You can also assign a value to the variable when you declare it:
 
-let carName = "Volvo";
+let carName1 = "Volvo";
 
-console.log(carName);
+console.log(carName1);
 
 // Note
 
@@ -184,19 +184,19 @@ console.log(carName);
 
 // Example
 
-//let person = "John Doe", carName = "Volvo", price = 200;
+let person$ = "John Doe", carName$ = "Volvo", price$ = 200;
 
-console.log(carName); //Volvo
+console.log(carName$); //Volvo
 
 // A declaration can span multiple lines:
 
 // Example
 
-//let person = "John Doe",
-//carName = "Volvo",
-//price = 200;
+let person3 = "John Doe",
+carName3 = "Volvo",
+price3 = 200;
 
-console.log(carName); //Volvo
+console.log(carName3); //Volvo
 
 // Value = undefined
 // In computer programs, variables are often declared without a value. The value can be so
@@ -208,9 +208,9 @@ console.log(carName); //Volvo
 
 // Example
 
-let carName;
+let carName4;
 
-console.log(carName); //undefined
+console.log(carName4); //undefined
 
 // Re-Declaring JavaScript Variables
 // If you re-declare a JavaScript variable declared with var, it will not lose its value.
@@ -219,10 +219,10 @@ console.log(carName); //undefined
 
 // Example
 
-var carName = "Volvo";
-var carName;
+var carName5 = "Volvo";
+var carName5;
 
-console.log(carName); //Volvo
+console.log(carName5); //Volvo
 
 // Note
 // You cannot re-declare a variable declared with let or const.
@@ -237,25 +237,25 @@ console.log(carName); //Volvo
 
 // Example
 
-let x = 5 + 2 + 3;
+let x$ = 5 + 2 + 3;
 
-console.log(x); //10
+console.log(x$); //10
 
 // You can also add strings, but strings will be concatenated:
 
 // Example
 
-let x = "John" + " " + "Doe";
+let x_ = "John" + " " + "Doe";
 
-console.log(x); //John Doe
+console.log(x_); //John Doe
 
 // Also try this:
 
 // Example
 
-let x = "5" + 2 + 3;
+let x3 = "5" + 2 + 3;
 
-console.log(x); //523
+console.log(x3); //523
 
 // Note
 // If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
@@ -264,7 +264,7 @@ console.log(x); //523
 
 // Example
 
-let x = 2 + 3 + "5"; //55
+let x4 = 2 + 3 + "5"; //55
 
 // JavaScript Dollar Sign $
 // Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:

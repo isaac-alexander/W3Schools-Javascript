@@ -36,8 +36,8 @@
 
 // This code assigns a simple value (Fiat) to a variable named car:
 // Example
-// let car = "Fiat";
-// console.log("Car:" + car); //Car:Fiat
+let car1 = "Fiat";
+console.log("Car:" + car1); //Car:Fiat
 ///////////////////////////////////////////////////////////////////////
 
 
@@ -47,8 +47,8 @@
 // This code assigns many values (Fiat, 500, white) to an object named car:
 
 // Example
-const car = { type: "Fiat", model: "500", color: "white" };
-console.log("The car type is " + car.type); //The car type is Fiat
+const car2 = { type: "Fiat", model: "500", color: "white" };
+console.log("The car type is " + car2.type); //The car type is Fiat
 ////////////////////////////////////////////////////////////////////
 
 // JavaScript Object Definition
@@ -74,13 +74,13 @@ console.log("The car type is " + car.type); //The car type is Fiat
 // Spaces and line breaks are not important. An object initializer can span multiple lines:
 
 // Create an Object
-// const person = {
-//     firstName: "John",
-//     lastName: "Doe",
-//     age: 50,
-//     eyeColor: "blue"
-// };
-// console.log(person.firstName + " is " + person.age + " years old."); //John is 50 years old.
+const person1 = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};
+console.log(person1.firstName + " is " + person1.age + " years old."); //John is 50 years old.
 ////////////////////////////////////////////////////////////////
 
 // This example creates an empty JavaScript object, and then adds 4 properties:
@@ -102,15 +102,15 @@ console.log(human.firstName + " is " + human.age + " years old."); //John is 50 
 
 // Example
 // Create an Object
-// const person = new Object();
+ const person2 = new Object();
 
 // // Add Properties
-// person.firstName = "John";
-// person.lastName = "Doe";
-// person.age = 50;
-// person.eyeColor = "blue";
+person2.firstName = "John";
+person2.lastName = "Doe";
+person2.age = 50;
+person2.eyeColor = "blue";
 
-// console.log(person.firstName + " is " + person.age + " years old.");
+console.log(person2.firstName + " is " + person2.age + " years old.");
 
 // note:The examples above do exactly the same.But, there is no need to use new Object().For readability, simplicity and execution speed, use the object literal method.
 // Object Properties
@@ -131,22 +131,22 @@ console.log(human.firstName + " is " + human.age + " years old."); //John is 50 
 
 
 // Create an Object:
-// const person = {
-//     firstName: "John",
-//     lastName : "Doe",
-//     id     :  5566
-//   };
+const person3 = {
+    firstName: "John",
+    lastName : "Doe",
+    id     :  5566
+  };
 
-//   console.log("The last name is " + person.lastName); //The last name is Doe
+  console.log("The last name is " + person3.lastName); //The last name is Doe
 // Display lastName from the Object:
 
 // Create an Object:
-// const person = {
-//     firstName: "John",
-//     lastName : "Doe",
-//     id     :  5566
-//   };
-// console.log("The last name is " + person["lastName"]); //The last name is Doe
+const person4 = {
+    firstName: "John",
+    lastName : "Doe",
+    id     :  5566
+  };
+console.log("The last name is " + person4["lastName"]); //The last name is Doe
 //   // Display lastName from the Object:
 ///////////////////////////////////////////////////////////////////////
 
@@ -162,15 +162,15 @@ console.log(human.firstName + " is " + human.age + " years old."); //John is 50 
 // eyeColor	blue
 // fullName	function() {return this.firstName + " " + this.lastName;}
 // // Example
-// const person = {
-//   firstName: "John",
-//   lastName : "Doe",
-//   id       : 5566,
-//   fullName : function() {
-//     return this.firstName + " " + this.lastName;
-//   }
-// };
-// console.log(person.fullName()); //John Doe
+const person5 = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+console.log(person5.fullName()); //John Doe
 
 // In the example above, this refers to the person object:
 

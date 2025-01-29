@@ -10,18 +10,18 @@
 //////////////////////////////////////////////////////////////////
 // Object Type Person
 //constructor function for person objects
-// function Person(first, last, age, eye) {
-//     this.firstname = first;
-//     this.lastname = last;
-//     this.age = age;
-//     this.eyecolor = eye;
-// }
+function Person(first, last, age, eye) {
+    this.firstname = first;
+    this.lastname = last;
+    this.age = age;
+    this.eyecolor = eye;
+}
 
 // //Create a Person object 
-// const myFather = new Person("John", "Doe", 50, "blue");
+const myFather = new Person("John", "Doe", 50, "blue");
 
 // //Display age
-// console.log("My father is " + myFather.age + "."); //My father is 50.
+console.log("My father is " + myFather.age + "."); //My father is 50.
 
 // note:
 // In the constructor function, this has no value.The value of this will become the new object when a new object is created.
@@ -33,19 +33,19 @@
 
 
 // Constructor function for Person objects
-// function Person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-//   }
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
 
 //   // Create two Person objects
-//   const myFather = new Person("John", "Doe", 50, "blue");
-//   const myMother = new Person("Sally", "Rally", 48, "green");
+   const myFather$ = new Person("John", "Doe", 50, "blue");
+   const myMother$ = new Person("Sally", "Rally", 48, "green");
 
 //   // Display age
-//   console.log("My father is " + myFather.age + ". My mother is " + myMother.age + "."); //My father is 50. My mother is 48.
+   console.log("My father is " + myFather$.age + ". My mother is " + myMother$.age + "."); //My father is 50. My mother is 48.
 
 /////////////////////////////////////////////////////////////////////////
 // Property Default Values
@@ -53,21 +53,21 @@
 
 // Example
 // Constructor function for Person objects
-// function Person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-//     this.nationality = "English";
-// }
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.nationality = "English";
+}
 
 // // Create 2 Person objects
-// const myFather = new Person("John", "Doe", 50, "blue");
-// const myMother = new Person("Sally", "Rally", 48, "green");
+ const myFather1 = new Person("John", "Doe", 50, "blue");
+const myMother1 = new Person("Sally", "Rally", 48, "green");
 
 // // Display nationality
 
-// console.log("My father is " + myFather.nationality + ". My mother is " + myMother.nationality); //My father is English. My mother is English
+console.log("My father is " + myFather1.nationality + ". My mother is " + myMother1.nationality); //My father is English. My mother is English
 
 //////////////////////////////////////////////////////////////////////
 
@@ -76,24 +76,24 @@
 
 // Example
 // // Constructor function for Person objects
-// function Person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-//   }
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
 
 //   // Create 2 Person objects
-//   const myFather = new Person("John", "Doe", 50, "blue");
-//   const myMother = new Person("Sally", "Rally", 48, "green");
+  const myFather2 = new Person("John", "Doe", 50, "blue");
+  const myMother2 = new Person("Sally", "Rally", 48, "green");
 
 //   // Add nationality to first object
-//   myFather.nationality = "English";
+   myFather2.nationality = "English";
 
 //   // Display nationality 
-//   console.log("My father is " + myFather.nationality); //My father is English
+   console.log("My father is " + myFather2.nationality); //My father is English
 
-//   note:The new property will be added to myFather. Not to any other Person Objects.
+//   note:The new property will be added to myFather2. Not to any other Person Objects.
 
 ///////////////////////////////////////////////////////////////////
 
@@ -103,44 +103,44 @@
 // Example
 
 // // Constructor function for Person Objects
-// function Person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-// }
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
 
 // // Create 2 Person Objects
-// const myFather = new Person("John", "Doe", 50, "blue");
-// const myMother = new Person("Sally", "Rally", 48, "green");
+ const myFather3 = new Person("John", "Doe", 50, "blue");
+ const myMother3 = new Person("Sally", "Rally", 48, "green");
 
 // // Will Not Work
-// Person.nationality = "English";
+ Person.nationality = "English";
 
 // // Display Nationality
-// console.log("The nationality of my father is " + myFather.nationality); //The nationality of my father is undefined
+ console.log("The nationality of my father is " + myFather3.nationality); //The nationality of my father is undefined
 
 // To add a new property, you must add it to the constructor function prototype:
 
 // Example
 
 // Constructor function for Person Objects
-// function Person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-// }
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
 
 // // Create 2 Person Objects
-// const myFather = new Person("John", "Doe", 50, "blue");
-// const myMother = new Person("Sally", "Rally", 48, "green");
+ const myFather4 = new Person("John", "Doe", 50, "blue");
+ const myMother4 = new Person("Sally", "Rally", 48, "green");
 
 // // Add a new Property
-// Person.prototype.nationality = "English";
+ Person.prototype.nationality = "English";
 
 // // Display new Property
-// console.log("The nationality of my father is " + myFather.nationality); //The nationality of my father is English
+ console.log("The nationality of my father is " + myFather4.nationality); //The nationality of my father is English
 
 //////////////////////////////////////////////////////////////////////
 //   Constructor Function Methods
@@ -160,10 +160,10 @@
 // }
 
 // // Create a Person object
-// const myFather = new Person("John", "Doe", 50, "blue");
+ //const myFather5 = new Person("John", "Doe", 50, "blue");
 
 // // Display full name
-// console.log("My father is " + myFather.fullName()); //My father is John Doe
+ //console.log("My father is " + myFather5.fullName()); //My father is John Doe
 
 ////////////////////////////////////////////////////////////////////////
 // Adding a Method to an Object
@@ -172,27 +172,27 @@
 // Example
 
 // // Constructor function for Person Objects
-// function Person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-//   }
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
   
 //   // Create 2 Person objects
-//   const myFather = new Person("John", "Doe", 50, "blue");
-//   const myMother = new Person("Sally", "Rally", 48, "green");
+   const myFather6 = new Person("John", "Doe", 50, "blue");
+   const myMother6 = new Person("Sally", "Rally", 48, "green");
   
 //   // Add a Name Method
-//   myMother.changeName = function (name) {
-//     this.lastName = name;
-//   }
+   myMother6.changeName = function (name) {
+     this.lastName = name;
+   }
   
 //   // Change Name
-//   myMother.changeName("Doe");
+   myMother6.changeName("Doe");
   
 //   // Display fullName
-//   console.log("My mother's last name is " + myMother.lastName); //My mother's last name is Doe
+   console.log("My mother's last name is " + myMother6.lastName); //My mother's last name is Doe
 
   //Note:
 //The new method will be added to myMother. Not to any other Person Objects.

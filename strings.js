@@ -7,9 +7,8 @@
 // A JavaScript string is zero or more characters written inside quotes.
 
 // Example
-// let text = "John Doe";  // String written inside quotes
-
-// console.log(text); //John Doe
+let text1 = "John Doe";  // String written inside quotes
+console.log(text1); //John Doe
 // You can use single or double quotes:
 
 // Example
@@ -40,17 +39,17 @@ console.log(answer1 + " " + answer2 + " " + answer3); //It's alright He is calle
 // Templates allow single and double quotes inside a string:
 
 // Example
-// let text = `He's often called "Johnny"`;
+ let text2 = `He's often called "Johnny"`;
 
-// console.log(text); //He's often called "Johnny"
+ console.log(text2); //He's often called "Johnny"
 // Note
 // Templates are not supported in Internet Explorer.
 
 // String Length
 // To find the length of a string, use the built-in length property:
 
-//let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//console.log(text.length); //26
+let text3 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log(text3.length); //26
 
 // Escape Characters
 // Because strings must be written within quotes, JavaScript will misunderstand this string:
@@ -69,16 +68,16 @@ console.log(answer1 + " " + answer2 + " " + answer3); //It's alright He is calle
 // Examples
 
 // \" inserts a double quote in a string:
-// let text = "We are the so-called \"Vikings\" from the north."
-// console.log(text); //We are the so-called "Vikings" from the north.
+ let text4 = "We are the so-called \"Vikings\" from the north."
+ console.log(text4); //We are the so-called "Vikings" from the north.
 
 // \' inserts a single quote in a string:
-// let text = 'It\'s alright.';
-// console.log(text); //It's alright
+ let text5 = 'It\'s alright.';
+ console.log(text5); //It's alright
 
 // \\ inserts a backslash in a string:
-// let text = "The character \\ is called backslash.";
-// console.log(text); //The character \ is called backslash.
+ let text6 = "The character \\ is called backslash.";
+ console.log(text6); //The character \ is called backslash.
 
 // Six other escape sequences are valid in JavaScript:
 
@@ -127,13 +126,13 @@ console.log(text); //The quick brown fox jumps over the lazy dog
 // let y = new String("John");
 // Example
 
-// x is a string
-// let x = "John";
+// x1 is a string
+ let x1 = "John";
 
-// // y is an object
-// let y = new String("John");
+// y1 is an object
+let y1 = new String("John");
 
-// console.log(typeof x + " " + typeof y); //string object
+console.log(typeof x1 + " " + typeof y1); //string object
 
 // Do not create String objects.
 
@@ -143,20 +142,20 @@ console.log(text); //The quick brown fox jumps over the lazy dog
 
 // When using the == operator, x and y are equal:
 
-// let x = "John";        // x is a string
-// let y = new String("John");  // y is an object
-// console.log((x==y)); //true
+ let x2 = "John";        // x2 is a string
+ let y2 = new String("John");  // y2 is an object
+ console.log((x2==y2)); //true
 
-// let x = "John";        // x is a string
-// let y = new String("John");  // y is an object
-// console.log((x===y)); //false
+ let x3 = "John";        // x3 is a string
+ let y3 = new String("John");  // y3 is an object
+ console.log((x3===y3)); //false
 
-// Note the difference between (x==y) and (x===y).
+// Note the difference between (x2==y2) and (x3===y3).
 
 
-// let x = new String("John");  // x is an object
-// let y = new String("John");  // y is an object
-// console.log((x==y)); //false
+ let x4 = new String("John");  // x4 is an object
+ let y4 = new String("John");  // y4 is an object
+ console.log((x4==y4)); //false
 
 let x = new String("John");  // x is an object
 let y = new String("John");  // y is an object

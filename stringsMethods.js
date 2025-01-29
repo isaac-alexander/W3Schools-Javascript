@@ -26,8 +26,8 @@
 // The length property returns the length of a string:
 
 // Example
-// let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// console.log(text.length); //26
+const text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log(text.length); //26
 
 /////////////////////////////////////////////////////////
 // Extracting String Characters
@@ -37,12 +37,16 @@
 // The charAt(position) Method
 // The charCodeAt(position) Method
 // Using property access [] like in arrays
+
+
+//////////////////////////////////////////////////////////////////////
+
 // JavaScript String charAt()
 // The charAt() method returns the character at a specified index (position) in a string:
 
 // Example
-// var text = "HELLO WORLD";
-// console.log(text.charAt(0)); //H
+const text2 = "HELLO WORLD";
+console.log(text2.charAt(0)); //H
 
 ////////////////////////////////////////////////////////////////////
 // JavaScript String charCodeAt()
@@ -51,8 +55,8 @@
 // The method returns a UTF-16 code (an integer between 0 and 65535).
 
 // Example
-// let text = "HELLO WORLD";
-// console.log(text.charCodeAt(0)); //72
+const text3 = "HELLO WORLD";
+console.log(text3.charCodeAt(0)); //72
 
 //////////////////////////////////////////////////////////////////
 // JavaScript String at()
@@ -60,22 +64,19 @@
 
 // Examples
 // Get the third letter of name:
-// const name = "W3Schools";
-// let letter = name.at(2);
-// console.log(letter); //S
+const name1 = "W3Schools";
+let letter1 = name1.at(2);
+console.log(letter1); //S
 
 //Get the third letter of name:
 
-// const name = "W3Schools";
-// let letter = name[2];
-// console.log(letter); //S
+const name2 = "W3Schools";
+let letter2 = name2[2];
+console.log(letter2); //S
 
-////////////////////////////////////////////////////////////////////
 // The at() method returns the character at a specified index (position) in a string.
 
-// The at() method is supported in all modern browsers since March 2022:
-
-// Note
+// Note:
 // The at() method is a new addition to JavaScript.
 
 // It allows the use of negative indexes while charAt() do not.
@@ -86,8 +87,8 @@
 
 // Property Access [ ]
 // Example
-// let text = "HELLO WORLD";
-// console.log(text[0]); //H
+const text4 = "HELLO WORLD";
+console.log(text4[0]); //H
 
 // Note
 // Property access might be a little unpredictable:
@@ -97,10 +98,9 @@
 // It is read only. str[0] = "A" gives no error (but does not work!)
 // Example
 
-// let text = "HELLO WORLD";
-
-// text[0] = "A";  // Does not work
-// console.log(text); //HELLO WORLD
+const text5 = "HELLO WORLD";
+text5[0] = "A";  // Does not work
+console.log(text5); //HELLO WORLD
 /////////////////////////////////////////////////////////////////////
 
 // Extracting String Parts
@@ -116,9 +116,9 @@
 
 // Example
 // Slice out a portion of a string from position 7 to position 13:
-// let text = "Apple, Banana, Kiwi";
-// let part = text.slice(7, 13);
-// console.log(part); //Banana
+const text6 = "Apple, Banana, Kiwi";
+const part1 = text6.slice(7, 13);
+console.log(part1); //Banana
 
 // Note
 // JavaScript counts positions from zero.
@@ -129,19 +129,19 @@
 
 // Examples
 // // If you omit the second parameter, the method will slice out the rest of the string:
-// let text = "Apple, Banana, Kiwi";
-// let part = text.slice(7) 
-//console.log(part); //Banana, Kiwi
+const text7 = "Apple, Banana, Kiwi";
+const part2 = text7.slice(7)
+console.log(part2); //Banana, Kiwi
 
 // //If a parameter is negative, the position is counted from the end of the string:
-// let text = "Apple, Banana, Kiwi";
-// let part = text.slice(-12);
-// console.log(part); //Banana, Kiwi
+const text8 = "Apple, Banana, Kiwi";
+const part3 = text8.slice(-12);
+console.log(part3); //Banana, Kiwi
 
 // //This example slices out a portion of a string from position -12 to position -6:
-// let text = "Apple, Banana, Kiwi";
-// let part = text.slice(-12,-6)
-//console.log(part); //Banana
+const text9 = "Apple, Banana, Kiwi";
+const part4 = text9.slice(-12, -6)
+console.log(part4); //Banana
 
 ////////////////////////////////////////////////////////////////////////
 // JavaScript String substring()
@@ -150,8 +150,8 @@
 // The difference is that start and end values less than 0 are treated as 0 in substring().
 
 // Example
-// let str = "Apple, Banana, Kiwi";
-// console.log(str.substring(7,13)); //Banana
+const str1 = "Apple, Banana, Kiwi";
+console.log(str1.substring(7, 13)); //Banana
 
 // If you omit the second parameter, substring() will slice out the rest of the string.
 
@@ -161,20 +161,20 @@
 // The difference is that the second parameter specifies the length of the extracted part.
 
 // Example
-// let str = "Apple, Banana, Kiwi";
-// console.log(str.substr(7,6)); //Banana
+const str2 = "Apple, Banana, Kiwi";
+console.log(str2.substr(7, 6)); //Banana
 
 // If you omit the second parameter, substr() will slice out the rest of the string.
 
 // Example
-// let str = "Apple, Banana, Kiwi";
-// console.log(str.substr(7)); //Banana, Kiwi
+const str3 = "Apple, Banana, Kiwi";
+console.log(str3.substr(7)); //Banana, Kiwi
 
 // If the first parameter is negative, the position counts from the end of the string.
 
 // Example
-// let str = "Apple, Banana, Kiwi";
-// console.log(str.substr(-4)); //Kiwi
+const str5 = "Apple, Banana, Kiwi";
+console.log(str5.substr(-4)); //Kiwi
 
 //////////////////////////////////////////////////////////////////////
 // Converting to Upper and Lower Case
@@ -185,13 +185,13 @@
 // JavaScript String toUpperCase()
 // Example
 
-// let text1 = "Hello World!";
-// console.log(text1.toUpperCase()); //HELLO WORLD!
+const text1 = "Hello World!";
+console.log(text1.toUpperCase()); //HELLO WORLD!
 
 //JavaScript String toLowerCase()
 // //Example
-// let text1 = "Hello World!";       // String
-// console.log(text1.toLowerCase()); //hello world!
+const text$ = "Hello World!";       // String
+console.log(text$.toLowerCase()); //hello world!
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -200,11 +200,10 @@
 
 // Example
 
-// let text1 = "Hello";
-// let text2 = "World!";
-// let text3 = text1.concat(" ",text2);
-// console.log(text3); //Hello World!
-
+const text1_ = "Hello";
+const text2_ = "World!";
+const text3_ = text1_.concat(" ", text2_);
+console.log(text3_); //Hello World!
 // Note
 // All string methods return a new string. They don't modify the original string.
 
@@ -217,9 +216,9 @@
 // The trim() method removes whitespace from both sides of a string:
 
 // Example
-// let text1 = "     Hello World!     ";
-// let text2 = text1.trim();
-// console.log("Length text1 = " + text1.length + " Length text2 = " + text2.length); //Length text1 = 22 Length text2 = 12
+const text4_ = "     Hello World!     ";
+const text5_ = text4_.trim();
+console.log("Length text4_ = " + text4_.length + " Length text5_ = " + text5_.length); //Length text4_ = 22 Length text5_ = 12
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -229,9 +228,9 @@
 // The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
 
 // Example
-// let text1 = "     Hello World!     ";
-// let text2 = text1.trimEnd();
-// console.log("Length text1 = " + text1.length + " Length text2 = " + text2.length); //Length text1 = 22 Length text2 = 17
+const text6_ = "     Hello World!     ";
+const text7_ = text6_.trimEnd();
+console.log("Length text6_ = " + text6_.length + " Length text7_ = " + text7_.length); //Length text6_ = 22 Length text7_ = 17
 
 //////////////////////////////////////////////////////////////////////
 // JavaScript String Padding
@@ -244,13 +243,13 @@
 
 // Examples
 // Pad a string with "0" until it reaches the length 4:
-// let text = "5";
-// text = text.padStart(4,"0");
-// console.log(text); //0005
+let text8_ = "5";
+text8_ = text8_.padStart(4, "0");
+console.log(text8_); //0005
 
 /////////////////////////////////////////////////////////
-// let text = "5";
-// console.log(text.padStart(4,"x")); //xxx5
+const text9_ = "5";
+console.log(text9_.padStart(4, "x")); //xxx5
 
 // Note
 // The padStart() method is a string method.
@@ -260,9 +259,9 @@
 // See the example below.
 
 // // Example
-// let numb = 5;
-// let text = numb.toString();
-// console.log(text.padStart(4,0)); //0005
+let numb = 5;
+let text9$ = numb.toString();
+console.log(text9$.padStart(4, 0)); //0005
 
 ////////////////////////////////////////////////////////////////////
 // JavaScript String padEnd()
@@ -272,12 +271,13 @@
 
 // Examples
 
-// let text = "5";
-// text = text.padEnd(4,"0");
-// console.log(text); //5000
+let text8$ = "5";
+text8$ = text.padEnd(4, "0");
+console.log(text8$); //5000
 
-// let text = "5";
-// console.log(text.padEnd(4,"x")); //5xxx
+
+let text7$ = "5";
+console.log(text7$.padEnd(4, "x")); //5xxx
 
 // Note
 // The padEnd() method is a string method.
@@ -288,9 +288,9 @@
 
 // Example
 
-// let numb = 5;
-// let text = numb.toString();
-// console.log(text.padEnd(4,"x")); //5xxx
+const number = 5;
+const text6$ = number.toString();
+console.log(text6$.padEnd(4, "x")); //5xxx
 
 //////////////////////////////////////////////////////////////////////////
 // JavaScript String repeat()
@@ -303,13 +303,13 @@
 // Examples
 // Create copies of a text:
 
-// let text = "Hello world!";
-// let result = text.repeat(2);
-// console.log(result); //Hello world!Hello world!
+let text5$ = "Hello world!";
+let result5$ = text5$.repeat(2);
+console.log(result5$); //Hello world!Hello world!
 
-// let text = "Hello world!";
-// let result = text.repeat(4);
-// console.log(result); //Hello world!Hello world!Hello world!Hello world!
+const text4$ = "Hello world!";
+const result = text4$.repeat(4);
+console.log(result); //Hello world!Hello world!Hello world!Hello world!
 
 // Syntax
 // string.repeat(count)
@@ -345,10 +345,10 @@
 
 // Example
 
-// let text = "I love cats. Cats are very easy to love. Cats are very popular."
-// text = text.replaceAll("Cats","Dogs");
-// text = text.replaceAll("cats","dogs");
-// console.log(text); //I love dogs. Dogs are very easy to love. Dogs are very popular.
+let text1$_ = "I love cats. Cats are very easy to love. Cats are very popular."
+text1$_ = text1$_.replaceAll("Cats", "Dogs");
+text1$_ = text1$_.replaceAll("cats", "dogs");
+console.log(text1$_); //I love dogs. Dogs are very easy to love. Dogs are very popular.
 
 // The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
 
@@ -356,10 +356,10 @@
 
 // Example
 
-// let text = "I love cats. Cats are very easy to love. Cats are very popular";
-// text = text.replaceAll(/Cats/g,"Dogs");
-// text = text.replaceAll(/cats/g,"dogs");
-// console.log(text); //I love dogs. Dogs are very easy to love. Dogs are very popular
+let text2$_ = "I love cats. Cats are very easy to love. Cats are very popular";
+text2$_ = text2$_.replaceAll(/Cats/g, "Dogs");
+text2$_ = text2$_.replaceAll(/cats/g, "dogs");
+console.log(text2$_); //I love dogs. Dogs are very easy to love. Dogs are very popular
 
 //////////////////////////////////////////////////////////////////////////
 // Converting a String to an Array
@@ -369,10 +369,9 @@
 // A string can be converted to an array with the split() method:
 
 // Example
-// let text = "a,b,c,d,e,f";
-// const myArray = text.split(",");
-// console.log(myArray[0]); //a
-
+let text3$_ = "a,b,c,d,e,f";
+myArray = text3$_.split(",");
+console.log(myArray[0]); //a
 // If the separator is omitted, the returned array will contain the whole string in index [0].
 
 // If the separator is "", the returned array will be an array of single characters:
@@ -380,11 +379,11 @@
 // Example
 
 
-// let text = "Hello";
-// const myArr = text.split("");
+let text4$_ = "Hello";
+const myArr = text4$_.split("");
 
-// text = "";
-// for (let i = 0; i < myArr.length; i++) {
-//   text += myArr[i] + " "
-// }
-// console.log(text); //H e l l o 
+text4$_ = "";
+for (let i = 0; i < myArr.length; i++) {
+    text4$_ += myArr[i] + " "
+}
+console.log(text4$_); //H e l l o 
