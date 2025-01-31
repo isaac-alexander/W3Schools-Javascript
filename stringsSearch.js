@@ -134,3 +134,68 @@ console.log(Array.from(iterator2));
 const text9 = "I love cats. Cats are very easy to love. Cats are very popular."
 const iterator3 = text9.matchAll(/Cats/gi);
 console.log(Array.from(iterator3));
+
+/////////////////////////////////////////////////////////////////////////
+
+// JavaScript String includes()
+// The includes() method returns true if a string contains a specified value.
+
+// Otherwise it returns false.
+// Examples
+//Check if a string includes "world":
+
+const text$4 = "Hello world, welcome to the universe.";
+console.log(text$4.includes("world"));
+
+// Check if a string includes "world". Start at position 12:
+
+const text$5 = "Hello world, welcome to the universe.";
+console.log(text$5.includes("world", 12));
+
+////////////////////////////////////////////////////////////////////////
+// JavaScript String startsWith()
+// The startsWith() method returns true if a string begins with a specified value.
+
+// Otherwise it returns false:
+
+// Examples
+// Returns true:
+
+text$6 = "Hello world, welcome to the universe.";
+console.log(text$6.startsWith("Hello"));
+
+// Returns false:
+
+const text$7 = "Hello world, welcome to the universe.";
+console.log(text$7.startsWith("world"));
+
+//A start position for the search can be specified:
+
+//Returns false:
+
+const text$8 = "Hello world, welcome to the universe.";
+console.log(text$8.startsWith("world", 5));
+
+// Returns true:
+
+const text$0 = "Hello world, welcome to the universe.";
+console.log(text$0.startsWith("world", 6));
+
+////////////////////////////////////////////////////////////////////////
+// JavaScript String endsWith()
+// The endsWith() method returns true if a string ends with a specified value.
+
+// Otherwise it returns false:
+
+// Examples
+// Check if a string ends with "Doe":
+
+const text1_ = "John Doe";
+console.log(text1_.endsWith("Doe")); // Returns true:
+
+
+// Check if the 11 first characters of a string ends with "world":
+
+const text2_ = "Hello world, welcome to the universe.";
+console.log(text2_.endsWith("world", 11)); // Returns true:
+
