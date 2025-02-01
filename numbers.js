@@ -273,3 +273,66 @@ console.log("Decimal 32 = " + "  " +
 // Octal (base 8): 40
 // Binary (base 2): 100000
 
+////////////////////////////////////////////////////////////////////
+//JavaScript Numbers as Objects
+//Normally JavaScript numbers are primitive values created from literals:
+
+const e = 123;
+// But numbers can also be defined as objects with the keyword new:
+
+const f = new Number(123);
+
+//Example
+
+const d1 = 123;
+const e1 = new Number(123);
+console.log(typeof d1 + " ," + typeof e1); //number ,object
+
+
+// Do not create Number objects.
+
+// The new keyword complicates the code and slows down execution speed.
+
+// Number Objects can produce unexpected results:
+
+// When using the == operator, d2 and e2 are equal:
+
+// d2 is a number
+const d2 = 500;
+
+// e2 is an object
+const e2 = new Number(500);
+console.log((d2==e2)); //true
+
+// When using the === operator, x and y are not equal.
+
+//// d3 is a number
+const d3 = 500;
+
+// e3 is an object
+const e3 = new Number(500);
+console.log(d3===e3); //false
+
+// Note the difference between (x==y) and (x===y).
+
+//(d4 == e4) true or false?
+
+// d4 is an object
+const d4 = new Number(500);
+
+// e4 is an object
+const e4 = new Number(500);
+console.log(d4===e4); //false
+
+
+// (d5 === e5) true or false?
+
+// d5 is an object
+const d5 = new Number(500);
+
+// e5 is an object
+const e5 = new Number(500);
+console.log(d5===e5); //false
+
+//Comparing two JavaScript objects always returns false.
+
