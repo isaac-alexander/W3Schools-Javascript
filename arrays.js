@@ -92,8 +92,8 @@ console.log(cars7); //[ 'Opel', 'Volvo', 'BMW' ]
 // The JavaScript method toString() converts an array to a string of (comma separated) array values.
 
 // Example
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits.toString()); //Banana,Orange,Apple,Mango
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits1.toString()); //Banana,Orange,Apple,Mango
 
 //////////////////////////////////////////////////////////////////////
 // Access the Full Array
@@ -102,3 +102,82 @@ console.log(fruits.toString()); //Banana,Orange,Apple,Mango
 // Example
 const cars8 = ["Saab", "Volvo", "BMW"];
 console.log(cars8); //[ 'Saab', 'Volvo', 'BMW' ]
+
+//////////////////////////////////////////////////////////////////////////
+
+// Arrays are Objects
+// Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+
+// But, JavaScript arrays are best described as arrays.
+
+// Arrays use numbers to access its "elements". In this example, person[0] returns John:
+
+// Array:
+const person = ["John", "Doe", 46];
+console.log(person[0]); //John
+
+//Objects use names to access its "members". In this example, person.firstName returns John:
+
+// Object:
+const person2 = { firstName: "John", lastName: "Doe", age: 46 };
+console.log(person2.firstName); //John
+
+///////////////////////////////////////////////////////////////////////
+
+// Array Elements Can Be Objects
+// JavaScript variables can be objects. Arrays are special kinds of objects.
+
+// Because of this, you can have variables of different types in the same Array.
+
+// You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+
+// myArray[0] = Date.now;
+// myArray[1] = myFunction;
+// myArray[2] = myCars;
+
+////////////////////////////////////////////////////////////////////////
+// Array Properties and Methods
+// The real strength of JavaScript arrays are the built-in array properties and methods:
+
+//cars.length   // Returns the number of elements
+//cars.sort()   // Sorts the array
+
+///////////////////////////////////////////////////////////////////////
+// The length Property
+// The length property of an array returns the length of an array (the number of array elements).
+
+// Example
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruits2.length;
+console.log(size); //4
+
+//The length property is always one more than the highest array index.
+
+////////////////////////////////////////////////////////////////////////
+// Accessing the First Array Element
+// Example
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits3[0]); //Banana
+
+////////////////////////////////////////////////////////////////////////
+// Accessing the Last Array Element
+// Example
+const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits4[fruits4.length - 1]); //Mango
+
+//////////////////////////////////////////////////////////////////////
+// Looping Array Elements
+// One way to loop through an array, is using a for loop:
+
+// Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+for (let i = 0; i < fLen; i++) {
+    console.log(fruits[i]);
+};
+
+// You can also use the Array.forEach() function:
+
+// Example
+const fruits$ = ["Banana", "Orange", "Apple", "Mango"];
