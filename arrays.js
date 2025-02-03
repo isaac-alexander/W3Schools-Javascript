@@ -170,14 +170,65 @@ console.log(fruits4[fruits4.length - 1]); //Mango
 // One way to loop through an array, is using a for loop:
 
 // Example
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let fLen = fruits.length;
+const fruits$ = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits$.length;
 
 for (let i = 0; i < fLen; i++) {
-    console.log(fruits[i]);
+    console.log(fruits$[i]);
 };
 
 // You can also use the Array.forEach() function:
 
 // Example
-const fruits$ = ["Banana", "Orange", "Apple", "Mango"];
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});
+
+/////////////////////////////////////////////////////////////////////////
+
+// Adding Array Elements
+// The easiest way to add a new element to an array is using the push() method:
+
+// Example
+const fruits5 = ["Banana", "Orange", "Apple"];
+
+function myFunction() {
+    let fruits5 = ["Banana", "Orange", "Apple"];
+    fruits5.push("Lemon");  // Adds a new element (Lemon) to fruits
+    console.log(fruits5);
+    
+}
+myFunction()
+
+// New element can also be added to an array using the length property:
+
+//Example
+
+const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+fruits6[fruits6.length] = "Lemon";
+
+console.log(fruits6); //  ["Banana", "Orange", "Apple", "Mango", "Lemon"]
+
+// WARNING !
+
+// Adding elements with high indexes can create undefined "holes" in an array:
+
+// Example
+
+const fruits7 = ["Banana", "Orange", "Apple"];
+fruits7[6] = "Lemon";
+console.log(fruits7);
+
+//////////////////////////////////////////////////////////////////////
+// Associative Arrays
+// Many programming languages support arrays with named indexes.
+
+// Arrays with named indexes are called associative arrays (or hashes).
+
+// JavaScript does not support arrays with named indexes.
+
+// In JavaScript, arrays always use numbered indexes.  
+
+//Example
