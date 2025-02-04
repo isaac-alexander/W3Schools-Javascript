@@ -232,3 +232,135 @@ console.log(fruits7);
 // In JavaScript, arrays always use numbered indexes.  
 
 //Example
+
+const person3 = [];
+person3[0] = "John";
+person3[1] = "Doe";
+person3[2] = 46;
+person3.length;    // Will return 3
+person3[0];        // Will return "John"
+console.log(person3[0] + " " + person3.length);
+
+// WARNING !!
+// If you use named indexes, JavaScript will redefine the array to an object.
+
+// After that, some array methods and properties will produce incorrect results.
+
+//  Example:
+const person4 = [];
+person4["firstName"] = "John";
+person4["lastName"] = "Doe";
+person4["age"] = 46;
+person4.length;     // Will return 0
+person4[0];         // Will return undefined
+
+console.log(person4[0] + " " + person4.length);
+
+//////////////////////////////////////////////////////////////////////////
+// The Difference Between Arrays and Objects
+// In JavaScript, arrays use numbered indexes.  
+
+// In JavaScript, objects use named indexes.
+
+// Arrays are a special kind of objects, with numbered indexes.
+
+//////////////////////////////////////////////////////////////////////////
+// When to Use Arrays. When to use Objects.
+// JavaScript does not support associative arrays.
+// You should use objects when you want the element names to be strings (text).
+// You should use arrays when you want the element names to be numbers.
+
+/////////////////////////////////////////////////////////////////////////
+
+// JavaScript new Array()
+// JavaScript has a built-in array constructor new Array().
+
+// But you can safely use [] instead.
+
+// These two different statements both create a new empty array named points:
+
+// const points = new Array();
+// const points = [];
+// These two different statements both create a new array containing 6 numbers:
+
+// const points = new Array(40, 100, 1, 5, 25, 10);
+const points = [40, 100, 1, 5, 25, 10]
+
+console.log(points[0]); //40
+//Avoid using new Array(). Use [] instead.
+
+//The new keyword can produce some unexpected results:
+
+// Create an array with three elements:
+const points1 = new Array(40, 100, 1);
+console.log(points1);  //[ 40, 100, 1 ]
+
+// Create an array with two elements:
+const points2 = new Array(40, 100);
+console.log(points2);  //[ 40, 100 ]
+
+// Create an array with one element ???
+const points3 = new Array(40);  
+console.log(points3);  //[ <40 empty items> ]
+
+// A Common Error
+// const points = [40];
+// is not the same as:
+
+// const points = new Array(40);
+
+// Create an array with one element:
+const points4 = [40];
+console.log(points4); //40
+
+// Create an array with 40 undefined elements:
+const points5 = new Array(40);  
+console.log(points5); //[ <40 empty items> ]
+
+//////////////////////////////////////////////////////////////////////////
+// How to Recognize an Array
+// A common question is: How do I know if a variable is an array?
+
+// The problem is that the JavaScript operator typeof returns "object":
+const fruits8 = ["Banana", "Orange", "Apple"];
+console.log(typeof fruits8); //object
+
+// The typeof operator returns object because a JavaScript array is an object.
+
+// Solution 1:
+// To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():
+const fruits9 = ["Banana", "Orange", "Apple"];
+console.log(Array.isArray(fruits9)); //true
+
+// Solution 2:
+// The instanceof operator returns true if an object is created by a given constructor:
+const fruits0 = ["apples", "bananas", "oranges"];
+console.log("Array: " + (fruits instanceof Array)); //Array: true
+
+
+//////////////////////////////////////////////////////////////////////////
+// Nested Arrays and Objects
+// Values in objects can be arrays, and values in arrays can be objects:
+
+// Example
+// const myObj = {
+//   name: "John",
+//   age: 30,
+//   cars: [
+//     {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+//     {name:"BMW", models:["320", "X3", "X5"]},
+//     {name:"Fiat", models:["500", "Panda"]}
+//   ]
+// }
+// // To access arrays inside arrays, use a for-in loop for each array:
+
+
+// for (let i in myObj.cars) {
+//     x += " " + myObj.cars[i].name + " ";
+//     for (let j in myObj.cars[i].models) {
+//       x += myObj.cars[i].models[j] + " ";
+//     }
+//   }
+
+//   console.log(x);
+  
