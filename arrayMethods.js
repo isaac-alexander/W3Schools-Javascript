@@ -155,3 +155,84 @@ console.log(fruits9); //[ 'Kiwi', 'Orange', 'Apple', 'Mango' ]
 // Example
 const fruits$ = ["Banana", "Orange", "Apple", "Mango"];
 fruits$[fruits$.length] = "Kiwi";
+
+/////////////////////////////////////////////////////////////////////
+// JavaScript Array delete()
+// Warning !
+// Using delete() leaves undefined holes in the array.
+
+// Use pop() or shift() instead.
+
+//check*
+// Example
+// const fruits1a = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(delete fruits1a[0]);
+
+
+/////////////////////////////////////////////////////////////////////////
+// Merging Arrays (Concatenating)
+// In programming languages, concatenation means joining strings end-to-end.
+
+// Concatenation "snow" and "ball" gives "snowball".
+
+// Concatenating arrays means joining arrays end-to-end.
+
+// JavaScript Array concat()
+// The concat() method creates a new array by merging (concatenating) existing arrays:
+
+// Example (Merging Two Arrays)
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+console.log(myChildren); //[ 'Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus' ]
+
+// Note
+// The concat() method does not change the existing arrays. It always returns a new array.
+
+// The concat() method can take any number of array arguments.
+
+// Example (Merging Three Arrays)
+const array1 = ["Cecilie", "Lone"];
+const array2 = ["Emil", "Tobias", "Linus"];
+const array3 = ["Robin", "Morgan"];
+
+const myChildren1 = array1.concat(array2, array3); 
+console.log(myChildren1); //[ 'Cecilie', 'Lone', 'Emil',  'Tobias', 'Linus',   'Robin',  'Morgan' ]
+
+// The concat() method can also take strings as arguments:
+
+// Example (Merging an Array with Values)
+const arr1 = ["Emil", "Tobias", "Linus"];
+const myChildren2 = arr1.concat("Peter");
+console.log(myChildren2); //[ 'Emil', 'Tobias', 'Linus', 'Peter' ]
+
+////////////////////////////////////////////////////////////////////////
+
+// Array copyWithin()
+// The copyWithin() method copies array elements to another position in an array:
+
+// Examples
+// Copy to index 2, all elements from index 0:
+
+const fruits1b = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits1b.copyWithin(2, 0)); //[ 'Banana', 'Orange', 'Banana', 'Orange' ]
+
+
+// Copy to index 2, the elements from index 0 to 2:
+
+const fruits1c = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
+console.log(fruits1c.copyWithin(2, 0, 2)); //[ 'Banana', 'Orange', 'Banana', 'Orange', 'Kiwi', 'Papaya' ]
+
+////////////////////////////////////////////////////////////////////////
+// Note
+// The copyWithin() method overwrites the existing values.
+
+// The copyWithin() method does not add items to the array.
+
+// The copyWithin() method does not change the length of the array.
+
+// Flattening an Array
+// Flattening an array is the process of reducing the dimensionality of an array.
+
+// Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.
+
