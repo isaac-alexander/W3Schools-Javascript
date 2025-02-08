@@ -293,3 +293,84 @@ let removed = fruits1d.splice(2, 2, "Lemon", "Kiwi");
 console.log("New Array: " + fruits1d); //New Array: Banana,Orange,Lemon,Kiwi
 
 console.log("Removed Items:  " + removed); //Removed Items:  Apple,Mango
+
+//////////////////////////////////////////////////////////////////////
+// Using splice() to Remove Elements
+// With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+
+// Example
+const fruits1e = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits1e); //[ 'Banana', 'Orange', 'Apple', 'Mango' ]
+
+fruits1e.splice(0, 1);
+console.log(fruits1e); //[ 'Orange', 'Apple', 'Mango' ]
+
+// The first parameter (0) defines the position where new elements should be added (spliced in).
+
+// The second parameter (1) defines how many elements should be removed.
+
+// The rest of the parameters are omitted. No new elements will be added.
+
+//////////////////////////////////////////////////////////////////////////
+// JavaScript Array toSpliced()
+// ES2023 added the Array toSpliced() method as a safe way to splice an array without altering the original array.
+
+// The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+
+// Example
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const spliced = months.toSpliced(0, 1);
+console.log(spliced); //[ 'Feb', 'Mar', 'Apr' ]
+
+///////////////////////////////////////////////////////////////////////
+
+// JavaScript Array slice()
+// The slice() method slices out a piece of an array into a new array:
+
+// Example
+// Slice out a part of an array starting from array element 1 ("Orange"):
+
+const fruits1f = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits1f.slice(1);
+console.log(fruits1f + "  " + citrus); //Banana,Orange,Lemon,Apple,Mango  Orange,Lemon,Apple,Mango
+
+// Note
+// The slice() method creates a new array.
+
+// The slice() method does not remove any elements from the source array.
+
+// Example
+// Slice out a part of an array starting from array element 3 ("Apple"):
+const fruits1g = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus1g = fruits1g.slice(3);
+
+console.log(fruits1g + "  " + citrus1g); //Banana,Orange,Lemon,Apple,Mango  Apple,Mango
+
+// The slice() method can take two arguments like slice(1, 3).
+
+// The method then selects elements from the start argument, and up to (but not including) the end argument.
+
+// Example
+const fruits1h = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus1h = fruits1h.slice(1,3);
+
+console.log(fruits1h + "  " + citrus1h); //Banana,Orange,Lemon,Apple,Mango  Orange,Lemon
+
+// If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array.
+
+// Example
+const fruits2a = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus2a = fruits2a.slice(2);
+console.log(fruits2a + "  " + citrus2a); //Banana,Orange,Lemon,Apple,Mango  Lemon,Apple,Mango
+
+// ////////////////////////////////////////////////////////////////////
+// Automatic toString()
+// JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+
+// This is always the case when you try to output an array.
+
+
+// Example
+const fruits2b = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits2b.toString()); //Banana,Orange,Apple,Mango
+
