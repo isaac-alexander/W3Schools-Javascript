@@ -236,3 +236,60 @@ console.log(fruits1c.copyWithin(2, 0, 2)); //[ 'Banana', 'Orange', 'Banana', 'Or
 
 // Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.
 
+// JavaScript Array flat()
+// ES2019 Introduced the Array flat() method.
+
+// The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+
+// Example
+const myArr = [[1,2],[3,4],[5,6]];
+
+const newArr = myArr.flat();
+console.log(newArr); //[ 1, 2, 3, 4, 5, 6 ]
+
+///////////////////////////////////////////////////////////////////////
+// JavaScript Array flatMap()
+// ES2019 added the Array flatMap() method to JavaScript.
+
+// The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.
+
+// Example
+const myArr2 = [1, 2, 3, 4, 5,6];
+const newArr2 = myArr2.flatMap(x => [x, x * 10]);
+console.log(newArr2);
+
+// [
+//     1, 10,  2, 20,  3,
+//    30,  4, 40,  5, 50,
+//     6, 60
+//  ]
+
+// Splicing and Slicing Arrays
+// The splice() method adds new items to an array.
+
+// The slice() method slices out a piece of an array.
+
+// JavaScript Array splice()
+// The splice() method can be used to add new items to an array:
+
+// Example
+const fruits1a = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits1a);
+fruits1a.splice(2, 0, "Lemon", "Kiwi"); //[ 'Banana', 'Orange', 'Apple', 'Mango' ]
+console.log(fruits1a); //[ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ]
+
+// The first parameter (2) defines the position where new elements should be added (spliced in).
+
+// The second parameter (0) defines how many elements should be removed.
+
+// The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+// The splice() method returns an array with the deleted items:
+
+const fruits1d = ["Banana", "Orange", "Apple", "Mango"];
+console.log("Original Array:  " + fruits1d); //Original Array:  Banana,Orange,Apple,Mango
+
+let removed = fruits1d.splice(2, 2, "Lemon", "Kiwi"); 
+console.log("New Array: " + fruits1d); //New Array: Banana,Orange,Lemon,Kiwi
+
+console.log("Removed Items:  " + removed); //Removed Items:  Apple,Mango
