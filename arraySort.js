@@ -129,26 +129,25 @@ console.log(points1);  //[ 100, 40, 25, 10, 5, 1 ]
 // You can use this code snippet to experiment with numerically and alphabetically sorting:
 
 //Example
-// const points2 = [40, 100, 1, 5, 25, 10];
-// console.log(points2);
+const points2 = [40, 100, 1, 5, 25, 10];
+console.log("First points " + points2);
 
 
-// function myFunction1(points2) {
-//   return points2.sort();
-// }
+function myFunction1(points2) {
+  return points2.sort();
+}
 
-// const Points2 = myFunction1(points2);
-// console.log(points2); [ 1, 10, 100, 25, 40, 5 ]
+const Points2 = myFunction1(points2);
+console.log("First Function Point " + points2); [ 1, 10, 100, 25, 40, 5 ]
 
 
 
-// function myFunction2(points2) {
-//   return points2((a, b) => a - b);
+function myFunction2(points2) {
+   points2.sort(function(a, b){return a - b});
 
-// }
+}
 
-//  myFunction2(  console.log(points2));
-//  console.log(points2);
+ console.log("Second Function Point " +points2);
 //MISTAKE********* //WILL CHECK*******
 
 /////////////////////////////////////////////////////////////////////
@@ -167,3 +166,90 @@ console.log(points1);  //[ 100, 40, 25, 10, 5, 1 ]
 // console.log(myFunction());
 
 //MISTAKE******* //WILL CHECK
+
+////////////////////////////////////////////////////////////////////
+// The Fisher Yates Method
+// The points.sort() method in the example above is not accurate. It will favor some numbers over others.
+
+// The most popular correct method, is called the Fisher Yates shuffle, and was introduced in data science as early as 1938!
+
+// In JavaScript the method can be translated to this:
+
+// Example
+// const points4 = [40, 100, 1, 5, 25, 10];
+
+// function myFunction() {
+//   for (let i = points4.length -1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i+1));
+//     let k = points[i];
+//     points[i] = points[j];
+//     points[j] = k;
+//   }
+
+// I DOON'T UNDERSTAND THIS TOO. IT HAS AN ON CLICK BUTTON THAT GENERATE THE ARRAY IN RANDOM ORDERS**
+
+
+
+// Find the Lowest (or Highest) Array Value
+// There are no built-in functions for finding the max or min value in an array.
+
+// To find the lowest or highest value you have 3 options:
+
+// Sort the array and read the first or last element
+// Use Math.min() or Math.max()
+// Write a home made function
+// Find Min or Max with sort()
+// After you have sorted an array, you can use the index to obtain the highest and lowest values.
+
+// Sort Ascending:
+// Example
+
+const points5 = [40, 100, 1, 5, 25, 10];
+points5.sort(function(a, b){return a-b});
+
+console.log(points5[0]); //1
+
+// Sort Descending:
+// Example
+const points6 = [40, 100, 1, 5, 25, 10];
+points6.sort(function(a, b){return b-a});
+console.log(points6[0]); //100
+
+// Note
+// Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.
+
+//////////////////////////////////////////////////////////////////////////
+// Using Math.min() on an Array
+// You can use Math.min.apply to find the lowest number in an array:
+
+// Example
+const points7 = [40, 100, 1, 5, 25, 10];
+function myArrayMin(arr) {
+    return Math.min.apply(null, arr);
+  }
+  console.log(myArrayMin(points7)); //1
+
+// Math.min.apply(null, [1, 2, 3]) is equivalent to Math.min(1, 2, 3).
+
+//////////////////////////////////////////////////////////////////////
+// Using Math.max() on an Array
+// You can use Math.max.apply to find the highest number in an array:
+
+// Example
+const points8 = [40, 100, 1, 5, 25, 10];
+function myArrayMax(arr) {
+    return Math.max.apply(null, arr);
+  }
+  console.log(myArrayMax(points8)) //100;
+
+//   Math.max.apply(null, [1, 2, 3]) is equivalent to Math.max(1, 2, 3).
+
+///////////////////////////////////////////////////////////////////////
+// // JavaScript Array Minimum Method
+// There is no built-in function for finding the lowest value in a JavaScript array.
+
+// The fastest code to find the lowest number is to use a home made method.
+
+// This function loops through an array comparing each value with the lowest value found:
+
+// Example (Find Min)
