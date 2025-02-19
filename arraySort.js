@@ -90,7 +90,7 @@ console.log(reversed); //[ 'Apr', 'Mar', 'Feb', 'Jan' ]
 const points = [40, 100, 1, 5, 25, 10];
 console.log(points); //[ 40, 100, 1, 5, 25, 10 ]
 
-points.sort(function(a, b){return a - b});
+points.sort(function (a, b) { return a - b });
 console.log(points); //[ 1, 5, 10, 25, 40, 100 ]
 
 // Use the same trick to sort an array descending:
@@ -99,7 +99,7 @@ console.log(points); //[ 1, 5, 10, 25, 40, 100 ]
 const points1 = [40, 100, 1, 5, 25, 10];
 console.log(points1); //[ 40, 100, 1, 5, 25, 10 ]
 
-points1.sort(function(a, b){return b - a});
+points1.sort(function (a, b) { return b - a });
 console.log(points1);  //[ 100, 40, 25, 10, 5, 1 ]
 
 /////////////////////////////////////////////////////////////////////////
@@ -134,20 +134,20 @@ console.log("First points " + points2);
 
 
 function myFunction1(points2) {
-  return points2.sort();
+    return points2.sort();
 }
 
 const Points2 = myFunction1(points2);
-console.log("First Function Point " + points2); [ 1, 10, 100, 25, 40, 5 ]
+console.log("First Function Point " + points2);[1, 10, 100, 25, 40, 5]
 
 
 
 function myFunction2(points2) {
-   points2.sort(function(a, b){return a - b});
+    points2.sort(function (a, b) { return a - b });
 
 }
 
- console.log("Second Function Point " +points2);
+console.log("Second Function Point " + points2);
 //MISTAKE********* //WILL CHECK*******
 
 /////////////////////////////////////////////////////////////////////
@@ -161,7 +161,7 @@ function myFunction2(points2) {
 
 // function myFunction() {
 //   points3.sort(function(){return 0.5 - Math.random()});
-    
+
 // }
 // console.log(myFunction());
 
@@ -176,18 +176,29 @@ function myFunction2(points2) {
 // In JavaScript the method can be translated to this:
 
 // Example
-// const points4 = [40, 100, 1, 5, 25, 10];
+const points4 = [40, 100, 1, 5, 25, 10];
 
-// function myFunction() {
-//   for (let i = points4.length -1; i > 0; i--) {
-//     let j = Math.floor(Math.random() * (i+1));
-//     let k = points[i];
-//     points[i] = points[j];
-//     points[j] = k;
-//   }
+function myFunction() {
+    for (let i = points4.length - 1; i > 0; i--) { //i = 5, True // i = 4, True
+        console.log("i is " + i);
 
-// I DOON'T UNDERSTAND THIS TOO. IT HAS AN ON CLICK BUTTON THAT GENERATE THE ARRAY IN RANDOM ORDERS**
+        let j = Math.floor(Math.random() * (i + 1)); //6 //0
+        console.log("j is " + j);
 
+        let k = points4[i]; //10 //25
+        console.log("k is " + k);
+
+        points4[i] = points4[j]; //null, 40
+        console.log("points4[i] is " + points4[i]);
+
+        points4[j] = k; //10, 25
+        console.log("points4[j] is " + points4[j]);
+
+        console.log("points4 is " + points4); //points4 is 40,100,10,5,25,1
+
+    }
+}
+myFunction();
 
 
 // Find the Lowest (or Highest) Array Value
@@ -205,14 +216,14 @@ function myFunction2(points2) {
 // Example
 
 const points5 = [40, 100, 1, 5, 25, 10];
-points5.sort(function(a, b){return a-b});
+points5.sort(function (a, b) { return a - b });
 
 console.log(points5[0]); //1
 
 // Sort Descending:
 // Example
 const points6 = [40, 100, 1, 5, 25, 10];
-points6.sort(function(a, b){return b-a});
+points6.sort(function (a, b) { return b - a });
 console.log(points6[0]); //100
 
 // Note
@@ -226,8 +237,8 @@ console.log(points6[0]); //100
 const points7 = [40, 100, 1, 5, 25, 10];
 function myArrayMin(arr) {
     return Math.min.apply(null, arr);
-  }
-  console.log(myArrayMin(points7)); //1
+}
+console.log(myArrayMin(points7)); //1
 
 // Math.min.apply(null, [1, 2, 3]) is equivalent to Math.min(1, 2, 3).
 
@@ -239,8 +250,8 @@ function myArrayMin(arr) {
 const points8 = [40, 100, 1, 5, 25, 10];
 function myArrayMax(arr) {
     return Math.max.apply(null, arr);
-  }
-  console.log(myArrayMax(points8)) //100;
+}
+console.log(myArrayMax(points8)) //100;
 
 //   Math.max.apply(null, [1, 2, 3]) is equivalent to Math.max(1, 2, 3).
 
@@ -253,3 +264,98 @@ function myArrayMax(arr) {
 // This function loops through an array comparing each value with the lowest value found:
 
 // Example (Find Min)
+const points9 = [40, 100, 1, 5, 25, 10];
+
+
+function myArrayMin(arr) {
+    let len = arr.length;
+    let min = Infinity;
+    while (len--) {
+        if (arr[len] < min) {
+            min = arr[len];
+        }
+    }
+    return min;
+}
+console.log("The lowest number is " + myArrayMin(points)); //The lowest number is 1.
+
+///////////////////////////////////////////////////////////////////////
+// JavaScript Array Maximum Method
+// There is no built-in function for finding the highest value in a JavaScript array.
+
+// The fastest code to find the highest number is to use a home made method.
+
+// This function loops through an array comparing each value with the highest value found:
+
+// Example (Find Max)
+const points0 = [40, 100, 1, 5, 25, 10];
+
+function myArrayMax(arr) {
+    let len = arr.length;
+    let max = -Infinity;
+    while (len--) {
+        if (arr[len] > max) {
+            max = arr[len];
+        }
+    }
+    return max;
+}
+console.log("The highest number is " + myArrayMax(points)); //The highest number is 100
+
+////////////////////////////////////////////////////////////////////////
+// Sorting Object Arrays
+// JavaScript arrays often contain objects:
+
+// Example
+// const cars = [
+//   {type:"Volvo", year:2016},
+//   {type:"Saab", year:2001},
+//   {type:"BMW", year:2010}
+// ];
+// Even if objects have properties of different data types, the sort() method can be used to sort the array.
+
+// The solution is to write a compare function to compare the property values:
+
+const cars = [
+    { type: "Volvo", year: 2016 },
+    { type: "Saab", year: 2001 },
+    { type: "BMW", year: 2010 }
+];
+
+displayCars();
+
+cars.sort(function (a, b) { return a.year - b.year });
+displayCars();
+function displayCars() {
+}
+displayCars()
+console.log(cars[0].type + " " + cars[0].year +  " " + cars[1].type + " " + cars[1].year +  " " + cars[2].type + " " + cars[2].year); //Saab 2001 BMW 2010 Volvo 2016
+
+// Comparing string properties is a little more complex:
+
+// Example
+
+// const cars1a = [
+//     {type:"Volvo", year:2016},
+//     {type:"Saab", year:2001},
+//     {type:"BMW", year:2010}
+//   ];
+  
+//   displayCars1a();
+  
+//   function myFunction() {
+//     cars1a.sort(function(a, b){
+//       let x = a.type.toLowerCase();
+//       let y = b.type.toLowerCase();
+//       if (x < y) {return -1;}
+//       if (x > y) {return 1;}
+//       return 0;
+//     });
+//     displayCars1a();
+//   }
+  
+//   function displayCars1a() {
+//   }
+
+// ****************I DON'T UNDERSTAND THIS*****************
+
